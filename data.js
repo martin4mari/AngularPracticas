@@ -1,4 +1,5 @@
-export default function () {
+module.exports = function () {
+
   return {
     products: [
       {
@@ -66,5 +67,5 @@ export default function () {
       },
     ],
     orders: [],
-  };
+  }
 }
