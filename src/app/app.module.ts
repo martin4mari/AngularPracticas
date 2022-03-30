@@ -30,6 +30,13 @@ import { RestDataSource } from './model/rest.datasource';
         component: CheckoutComponent,
         canActivate: [StoreFirstGuard],
       },
+      {
+        path: 'admin',
+        loadChildren: () =>
+          import('./admin/admin.module').then((m) => m.AdminModule),
+        canActivate: [StoreFirstGuard],
+      },
+
       { path: '**', redirectTo: '/store' },
     ]),
   ],
